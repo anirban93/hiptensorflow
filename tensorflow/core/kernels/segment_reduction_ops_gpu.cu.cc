@@ -68,7 +68,7 @@ struct UnsortedSegmentSumFunctor<GPUDevice, T, Index> {
     // Set 'output' to zeros.
     CudaLaunchConfig config = GetCudaLaunchConfig(output.size(), d);
     hipLaunchKernel(HIP_KERNEL_NAME(SetZero), dim3(config.block_count), dim3(config.thread_per_block), 0, d.stream(), 
-        output.size(), output.data());
+        static_cast<const int>(output.size()), output.data());
     if (data_size == 0 || segment_ids_shape.num_elements() == 0) {
       return;
     }
