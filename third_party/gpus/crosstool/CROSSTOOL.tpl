@@ -136,6 +136,8 @@ toolchain {
   cxx_builtin_include_directory: "/opt/rocm/hcc-1.0/compiler/lib/clang/6.0.0/include/"
   cxx_builtin_include_directory: "/opt/rocm/hcc-1.0/lib/clang/6.0.0/include"
   cxx_builtin_include_directory: "/opt/rocm/hcc-1.2/lib/clang/6.0.0/include"
+  cxx_builtin_include_directory: "/opt/rocm/hcc/lib/clang/6.0.0/include"
+  cxx_builtin_include_directory: "/opt/rocm/hsa/include"
 
   compilation_mode_flags {
     mode: DBG
